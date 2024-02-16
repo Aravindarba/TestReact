@@ -31,12 +31,12 @@ function App() {
           <Box component="main" sx={{ flexGrow: 10, p: 3 }}>
             <Container>
               <Routes>
-              <Route path="/login" element={<LoginPage setUserName={setUserName} onLogin={handleLogin} />} />
-                <Route path="/dashboard" element={isLoggedIn ? <DashBoard /> : <Navigate to="/login" />} />
-                <Route path="/customers" element={isLoggedIn ? <CustomerList /> : <Navigate to="/login" />} />
-                <Route path="/expensecalculation" element={isLoggedIn ? <ExpenseCalculation /> : <Navigate to="/login" />} />
-                <Route path="/product" element={isLoggedIn ? <ProductList /> : <Navigate to="/login" />} />
-                <Route path="/customersfeedback" element={isLoggedIn ? <CustomersFeedback /> : <Navigate to="/login" />} />
+              <Route path="/" element={<LoginPage setUserName={setUserName} onLogin={handleLogin} />} />
+                <Route path="/dashboard" element={isLoggedIn ? <DashBoard /> : <Navigate to="/" />} />
+                <Route path="/customers" element={isLoggedIn ? <CustomerList /> : <Navigate to="/" />} />
+                <Route path="/expensecalculation" element={isLoggedIn ? <ExpenseCalculation /> : <Navigate to="/" />} />
+                <Route path="/product" element={isLoggedIn ? <ProductList /> : <Navigate to="/" />} />
+                <Route path="/customersfeedback" element={isLoggedIn ? <CustomersFeedback /> : <Navigate to="/" />} />
               </Routes>
             </Container>
           </Box>
