@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="app">
-      <Router>
+      <Router basename="/TestReact">
         {isLoggedIn ? <Navbar userName={userName} onLogout={handleLogout} /> :<></>}
         <div className="content">
           <Box component="main" sx={{ flexGrow: 10, p: 3 }}>
