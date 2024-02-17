@@ -12,7 +12,7 @@ const LoginPage = ({ setUserName , onLogin }) => {
     event.preventDefault();
 
     // Send the user's credentials to the server
-    const response = await fetch('http://localhost:8080/CRM/login', {
+    const response = await fetch('http://ec2-3-27-14-153.ap-southeast-2.compute.amazonaws.com:8080/CRM/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userName: email, userPassword: password })
